@@ -4,7 +4,7 @@ Alpine-based image with Python and [GDAL](http://gdal.org/), compiled with selec
 
 ## Included drivers
 
-Some drivers are intentionally disabled to keep the image size down, while others
+Some drivers are intentionally disabled to keep the image size on the lower side, while others
 (namely [LIBKML](http://www.gdal.org/drv_libkml.html)) are specifically included.
 
 Output of `ogrinfo --formats` is:
@@ -61,3 +61,10 @@ Supported Formats:
   AVCBin -vector- (ro): Arc/Info Binary Coverage
   AVCE00 -vector- (ro): Arc/Info E00 (ASCII) Coverage
 ```
+
+## License
+
+Copyright © 2018, [Petr Krebs](https://github.com/petr-k).
+Released under the [MIT License](LICENSE).
+
+***
