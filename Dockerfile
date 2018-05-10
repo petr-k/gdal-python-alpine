@@ -1,5 +1,10 @@
 FROM python:3.6-alpine
 
+LABEL org.label-schema.name = "gdal-python-alpine"
+LABEL org.label-schema.description = "Alpine-based image with Python and GDAL/OGR, compiled with selected additional drivers."
+LABEL org.label-schema.vcs-url = "https://github.com/petr-k/gdal-python-alpine"
+LABEL org.label-schema.vendor = "Petr Krebs"
+
 ARG GDAL_VERSION=v2.2.4
 ARG LIBKML_VERSION=1.3.0
 
@@ -47,9 +52,10 @@ RUN \
     --without-webp \
   && make && make install && \
   # gdal python bindings
-  pip install gdal && \
+  pip install gdal --no-cache-dir && \
   # cleanup
   apk del build-dependencies && \
   cd / && \
   rm -rf build && \
-  rm -rf /var/cache/apk/*
+  rm -rf /var/cache/apk/* && \
+  rm -rf /usr/lib/python2.7

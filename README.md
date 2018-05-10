@@ -1,4 +1,6 @@
-# gdal-python-alpine
+# gdal-python-alpine 
+![Docker Pulls](https://img.shields.io/docker/pulls/petkr/gdal-python-alpine.svg?style=plastic)
+
 
 Alpine-based image with Python and [GDAL](http://gdal.org/), compiled with selected additional drivers.
 
